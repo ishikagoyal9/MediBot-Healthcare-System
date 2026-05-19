@@ -10,10 +10,11 @@ RUN apt-get update && apt-get install -y \
 
 WORKDIR /app
 
-COPY requirement.txt .
+COPY backend/requirement.txt .
 RUN pip install --no-cache-dir -r requirement.txt
 
-COPY . .
+COPY backend/ .
+COPY frontend/ ./frontend/
 
 EXPOSE 8000
 
