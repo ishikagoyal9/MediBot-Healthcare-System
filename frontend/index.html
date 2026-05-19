@@ -1,0 +1,1105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediBot - AI Healthcare Assistant</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <script src="script.js"></script>
+  <body>
+    <div class="bg-shapes">
+    <div class="shape shape-1"></div>
+    <div class="shape shape-2"></div>
+    </div>
+    <div class="particles" id="particles"></div>
+    <nav>
+      <div class="nav-container">
+        <div class="logo" onclick="scrollToSection('hero')">
+          <div class="logo-icon">🏥</div>
+          <span>MediBot</span>
+        </div>
+        <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+        <ul class="nav-links" id="navLinks">
+          <li>
+            <a href="#hero" class="nav-btn" onclick="scrollToSection('hero')"
+              >Home</a>
+          </li>
+          <li>
+            <a
+              href="#features"
+              class="nav-btn"
+              onclick="scrollToSection('features')"
+              >Features</a>
+          </li>
+          <li>
+            <a href="#articles"
+              class="nav-btn"
+              onclick="scrollToSection('articles')"
+              >Articles</a>
+          </li>
+          <li>
+            <a href="#about" class="nav-btn" onclick="scrollToSection('about')"
+              >About</a>
+          </li>
+          <li>
+            <a href="#contact"
+              class="nav-btn"
+              onclick="scrollToSection('contact')"
+              >Contact</a>
+          </li>
+          <li>
+            <button class="nav-btn login-btn" onclick="openLoginModal()">
+              🔐 Login
+            </button>
+          </li>
+          <li>
+            <button class="nav-btn chat-btn" onclick="toggleChat()">
+              💬 Chat
+            </button>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <section id="hero" class="hero">
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1>Your AI-Powered Healthcare Assistant</h1>
+          <p>
+            Get instant medical advice, symptom analysis, and health
+            recommendations powered by advanced AI technology. Available 24/7 to
+            support your wellness journey.
+          </p>
+          <div class="cta-buttons">
+            <button class="btn btn-primary" onclick="openLoginModal()">
+              🚀 Get Started
+            </button>
+            <a href="#features"
+              class="btn btn-secondary"
+              onclick="scrollToSection('features')"
+              >📋 Learn More</a>
+          </div>
+        </div>
+        <div class="hero-cards">
+          <div class="floating-card">
+            <h3>🏥 Always Available</h3>
+            <p>
+              Get immediate answers to your health questions anytime, anywhere
+              with our AI-powered chatbot available 24/7.
+            </p>
+          </div>
+          <div class="floating-card">
+            <h3>🔒 Secure & Private</h3>
+            <p>
+              Your health information is encrypted and protected with
+              enterprise-grade security protocols.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="features">
+      <div class="section-title">
+        <h2>Powerful Features</h2>
+        <p>Everything you need for intelligent healthcare assistance</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">🤖</div>
+          <h3>AI Chat Support</h3>
+          <p>
+            Conversational AI that understands your health concerns and provides
+            personalized guidance in real-time.
+          </p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🩺</div>
+          <h3>Symptom Analysis</h3>
+          <p>
+            Advanced symptom checker with 15+ common conditions. Get instant
+            analysis and recommendations.
+          </p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">💊</div>
+          <h3>Medicine Database</h3>
+          <p>
+            25+ common medicines with complete information including dosage,
+            side effects, and interactions.
+          </p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">📊</div>
+          <h3>Health Tracking</h3>
+          <p>
+            Monitor your health metrics, medications, and appointments all in
+            one convenient dashboard.
+          </p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🔔</div>
+          <h3>Smart Reminders</h3>
+          <p>
+            Never miss a medication dose or appointment with intelligent
+            notification systems.
+          </p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🌍</div>
+          <h3>24/7 Availability</h3>
+          <p>
+            Access healthcare information and support anytime, from anywhere in
+            the world.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="articles">
+      <div class="section-title">
+        <h2>Health Articles</h2>
+        <p>Stay informed with our latest health and wellness content</p>
+      </div>
+      <div class="articles-grid">
+        <div class="article-card">
+          <div class="article-image">🫀</div>
+          <div class="article-content">
+            <div class="article-meta">
+              <span>📅 Oct 28, 2025</span>
+              <span>⏱️ 5 min read</span>
+            </div>
+            <h3>Understanding Heart Health: Prevention Tips</h3>
+            <p>
+              Learn essential strategies to maintain cardiovascular health, from
+              diet modifications to exercise routines that strengthen your
+              heart.
+            </p>
+            <a href="#"
+              class="read-more"
+              onclick="showArticleModal(event, 'heart')"
+              >Read More →</a>
+          </div>
+        </div>
+
+        <div class="article-card">
+          <div
+            class="article-image"
+            style="background: linear-gradient(135deg, #4facfe, #00f2fe)">
+            🧠
+          </div>
+          <div class="article-content">
+            <div class="article-meta">
+              <span>📅 Oct 25, 2025</span>
+              <span>⏱️ 7 min read</span>
+            </div>
+            <h3>Mental Wellness: Managing Stress in Modern Life</h3>
+            <p>
+              Discover effective techniques to cope with daily stress, improve
+              mental clarity, and maintain emotional balance in today's
+              fast-paced world.
+            </p>
+            <a href="#"
+              class="read-more"
+              onclick="showArticleModal(event, 'mental')"
+              >Read More →</a>
+          </div>
+        </div>
+
+        <div class="article-card">
+          <div
+            class="article-image"
+            style="background: linear-gradient(135deg, #a8edea, #fed6e3)">
+            🥗
+          </div>
+          <div class="article-content">
+            <div class="article-meta">
+              <span>📅 Oct 22, 2025</span>
+              <span>⏱️ 6 min read</span>
+            </div>
+            <h3>Nutrition Guide: Eating for Optimal Health</h3>
+            <p>
+              Comprehensive guide to balanced nutrition, superfoods, and meal
+              planning strategies that support your overall wellness goals.
+            </p>
+            <a href="#"
+              class="read-more"
+              onclick="showArticleModal(event, 'nutrition')"
+              >Read More →</a>
+          </div>
+        </div>
+
+        <div class="article-card">
+          <div
+            class="article-image"
+            style="background: linear-gradient(135deg, #f093fb, #f5576c)">
+            💪
+          </div>
+          <div class="article-content">
+            <div class="article-meta">
+              <span>📅 Oct 20, 2025</span>
+              <span>⏱️ 8 min read</span>
+            </div>
+            <h3>Fitness Fundamentals: Building a Sustainable Routine</h3>
+            <p>
+              Start your fitness journey with proven strategies for creating an
+              exercise routine that fits your lifestyle and delivers lasting
+              results.
+            </p>
+            <a href="#"
+              class="read-more"
+              onclick="showArticleModal(event, 'fitness')"
+              >Read More →</a>
+          </div>
+        </div>
+
+        <div class="article-card">
+          <div
+            class="article-image"
+            style="background: linear-gradient(135deg, #ffecd2, #fcb69f)" >
+            😴
+          </div>
+          <div class="article-content">
+            <div class="article-meta">
+              <span>📅 Oct 18, 2025</span>
+              <span>⏱️ 5 min read</span>
+            </div>
+            <h3>Sleep Science: The Foundation of Good Health</h3>
+            <p>
+              Explore the critical role of quality sleep in your health, plus
+              practical tips for improving your sleep hygiene and rest patterns.
+            </p>
+            <a href="#"
+              class="read-more"
+              onclick="showArticleModal(event, 'sleep')"
+              >Read More →</a>
+          </div>
+        </div>
+
+        <div class="article-card">
+          <div
+            class="article-image"
+            style="background: linear-gradient(135deg, #43e97b, #38f9d7)">
+            🧘
+          </div>
+          <div class="article-content">
+            <div class="article-meta">
+              <span>📅 Oct 15, 2025</span>
+              <span>⏱️ 6 min read</span>
+            </div>
+            <h3>Mindfulness & Meditation: A Beginner's Guide</h3>
+            <p>
+              Simple meditation techniques and mindfulness practices to reduce
+              anxiety, improve focus, and enhance your overall quality of life.
+            </p>
+            <a href="#"
+              class="read-more"
+              onclick="showArticleModal(event, 'meditation')"
+              >Read More →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="section-title">
+        <h2>About MediBot</h2>
+        <p>Revolutionizing healthcare accessibility through AI technology</p>
+      </div>
+      <div class="about-content">
+        <div class="about-text">
+          <h2>Making Healthcare Accessible to Everyone</h2>
+          <p>
+            MediBot is your intelligent healthcare companion, designed to
+            provide instant medical information and guidance when you need it
+            most. Our advanced AI technology combines medical knowledge with
+            natural language processing to deliver accurate, helpful responses
+            to your health questions.
+          </p>
+          <p>
+            We believe that everyone deserves access to reliable health
+            information. Our mission is to bridge the gap between patients and
+            healthcare knowledge, empowering individuals to make informed
+            decisions about their wellbeing.
+          </p>
+          <p>
+            Available 24/7, MediBot serves as your first point of contact for
+            health concerns, symptom analysis, and medical guidance. While we're
+            not a replacement for professional medical care, we're here to
+            support your health journey every step of the way.
+          </p>
+
+          <div class="about-stats">
+            <div class="stat-card">
+              <div class="stat-number">∞</div>
+              <div class="stat-label">Unlimited Queries</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number">AI</div>
+              <div class="stat-label">AI Powered</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number">24/7</div>
+              <div class="stat-label">Availability</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number">⚡</div>
+              <div class="stat-label">Advanced Technology</div>
+            </div>
+          </div>
+        </div>
+        <div class="about-image">🏥</div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="section-title">
+        <h2>Get In Touch</h2>
+        <p>We'd love to hear from you</p>
+      </div>
+      <div class="contact-container">
+        <div class="contact-info">
+          <h3>Contact Information</h3>
+          <p>
+            Have questions or feedback? Reach out to us through any of the
+            following channels. Our team is here to help!
+          </p>
+
+          <div class="contact-item">
+            <div class="contact-icon">📧</div>
+            <div class="contact-item-text">
+              <h4>Email</h4>
+              <p>support@medibot.com</p>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon">📞</div>
+            <div class="contact-item-text">
+              <h4>Phone</h4>
+              <p>+1 (555) 123-4567</p>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon">📍</div>
+            <div class="contact-item-text">
+              <h4>Address</h4>
+              <p>123 Healthcare Ave, Medical District, CA 90210</p>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon">⏰</div>
+            <div class="contact-item-text">
+              <h4>Business Hours</h4>
+              <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form">
+          <h3 style="
+              color: var(--dark);
+              margin-bottom: 1.5rem;
+              font-size: 1.8rem;
+              font-weight: 900;">
+            Send Us a Message
+          </h3>
+          <form onsubmit="handleContactSubmit(event)">
+            <div class="form-group">
+              <label>Full Name</label>
+              <input type="text" placeholder="John Doe" required />
+            </div>
+            <div class="form-group">
+              <label>Email Address</label>
+              <input type="email" placeholder="your@email.com" required />
+            </div>
+            <div class="form-group">
+              <label>Subject</label>
+              <input type="text" placeholder="How can we help?" required />
+            </div>
+            <div class="form-group">
+              <label>Message</label>
+              <textarea
+                placeholder="Tell us more about your inquiry..."
+                required
+              ></textarea>
+            </div>
+            <button type="submit" class="btn-primary-full">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>MediBot</h3>
+          <p>
+            AI-powered healthcare assistance for everyone. Making medical
+            information accessible 24/7.
+          </p>
+        </div>
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <a href="#hero" onclick="scrollToSection('hero')">Home</a>
+          <a href="#features" onclick="scrollToSection('features')">Features</a>
+          <a href="#articles" onclick="scrollToSection('articles')">Articles</a>
+          <a href="#about" onclick="scrollToSection('about')">About</a>
+          <a href="#contact" onclick="scrollToSection('contact')">Contact</a>
+        </div>
+        <div class="footer-section">
+          <h3>Legal</h3>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Medical Disclaimer</a>
+        </div>
+        <div class="footer-section">
+          <h3>Connect</h3>
+          <a href="#">Twitter</a>
+          <a href="#">LinkedIn</a>
+          <a href="#">Facebook</a>
+          <a href="#">Instagram</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 MediBot. All rights reserved.</p>
+      </div>
+    </footer>
+    <!-- Login Modal -->
+    <div class="modal-overlay" id="loginModal">
+      <div class="login-modal">
+        <div class="login-left">
+          <div class="login-icon">🏥</div>
+          <h2>MediBot</h2>
+          <p>
+            Your AI-Powered Healthcare Assistant. Track your health, analyze
+            reports, and get instant medical guidance 24/7.
+          </p>
+        </div>
+        <div class="login-right">
+          <button class="modal-close" onclick="closeLoginModal()">×</button>
+          <div id="loginForm">
+            <h2>Welcome Back!</h2>
+            <p style="color: #666; margin-bottom: 2rem">
+              Login to access your health dashboard
+            </p>
+            <form onsubmit="handleLogin(event)">
+              <div class="form-group">
+                <label>Email</label>
+                <input
+                  type="email"
+                  id="loginEmail"
+                  placeholder="your@email.com"
+                  required/>
+              </div>
+              <div class="form-group">
+                <label>Password</label>
+                <input
+                 type="password"
+                 id="loginPassword"
+                 placeholder="Enter your password"
+                 required
+                />
+              </div>
+              <button type="submit" class="btn-primary-full">Login</button>
+            </form>
+            <div class="toggle-form">
+              Don't have an account? <a onclick="showSignup()">Sign Up</a>
+            </div>
+          </div>
+
+          <div id="signupForm" style="display: none">
+            <h2>Create Account</h2>
+            <p style="color: #666; margin-bottom: 2rem">
+              Join MediBot for better health management
+            </p>
+            <form onsubmit="handleSignup(event)">
+              <div class="form-group">
+                <label>Full Name</label>
+                <input
+                  type="text"
+                  id="signupName"
+                  placeholder="John Doe"
+                  required/>
+              </div>
+              <div class="form-group">
+                <label>Email</label>
+                <input
+                  type="email"
+                  id="signupEmail"
+                  placeholder="your@email.com"
+                  required/>
+              </div>
+              <div class="form-group">
+                <label>Password</label>
+                <input
+                 type="password"
+                 id="signupPassword"
+                 placeholder="Create password (min 6 chars)"
+                 required />
+              </div>
+              <button type="submit" class="btn-primary-full">Sign Up</button>
+            </form>
+            <div class="toggle-form">
+              Already have an account? <a onclick="showLogin()">Login</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Dashboard -->
+    <div class="dashboard-overlay" id="dashboardOverlay">
+      <div class="bg-shapes">
+        <div class="shape shape-1" style="opacity: 0.06"></div>
+        <div class="shape shape-2" style="opacity: 0.06"></div>
+      </div>
+
+      <div class="dashboard-header">
+        <div class="dashboard-logo">
+          <span style="font-size: 2rem">🏥</span>
+          <span>MediBot Dashboard</span>
+        </div>
+        <div class="dashboard-user">
+          <div style="text-align: right">
+            <h4 id="dashUserName">User</h4>
+            <p id="dashUserEmail" style="color: #666; font-size: 0.9rem">
+              user@email.com
+            </p>
+          </div>
+          <button class="logout-btn-dash" onclick="handleLogout()">
+            🚪 Logout
+          </button>
+        </div>
+      </div>
+
+      <div class="dashboard-main">
+        <div class="dashboard-welcome">
+          <h1>Good Morning, <span id="dashWelcomeName">User</span>! 👋</h1>
+          <p style="font-size: 1.1rem; opacity: 0.95">
+            Here's your health overview for today
+          </p>
+        </div>
+
+        <div class="health-cards-grid">
+          <div class="health-card-dash" onclick="editHealthMetric('bp')">
+            <div class="health-card-header-dash">
+              <div class="health-icon-dash">💓</div>
+              <div class="status-badge status-normal">Normal</div>
+            </div>
+            <h3 style="color: #666; margin-bottom: 0.5rem">Blood Pressure</h3>
+            <div class="health-value" id="bpValue">120/80</div>
+            <p style="color: #999; margin-top: 0.5rem">mmHg • Click to edit</p>
+          </div>
+
+          <div class="health-card-dash" onclick="editHealthMetric('sugar')">
+            <div class="health-card-header-dash">
+              <div class="health-icon-dash">🩸</div>
+              <div class="status-badge status-normal">Normal</div>
+            </div>
+            <h3 style="color: #666; margin-bottom: 0.5rem">Blood Sugar</h3>
+            <div class="health-value" id="sugarValue">95</div>
+            <p style="color: #999; margin-top: 0.5rem">mg/dL • Click to edit</p>
+          </div>
+
+          <div class="health-card-dash" onclick="editHealthMetric('weight')">
+            <div class="health-card-header-dash">
+              <div class="health-icon-dash">⚖️</div>
+              <div class="status-badge status-normal">Healthy</div>
+            </div>
+            <h3 style="color: #666; margin-bottom: 0.5rem">Weight</h3>
+            <div class="health-value" id="weightValue">68</div>
+            <p style="color: #999; margin-top: 0.5rem">kg • Click to edit</p>
+          </div>
+
+          <div class="health-card-dash" onclick="editHealthMetric('heart')">
+            <div class="health-card-header-dash">
+              <div class="health-icon-dash">❤️</div>
+              <div class="status-badge status-normal">Normal</div>
+            </div>
+            <h3 style="color: #666; margin-bottom: 0.5rem">Heart Rate</h3>
+            <div class="health-value" id="heartValue">72</div>
+            <p style="color: #999; margin-top: 0.5rem">bpm • Click to edit</p>
+          </div>
+        </div>
+
+        <div class="action-card">
+          <h2>📈 Health Trends</h2>
+          <div
+            style="
+              display: grid;
+              grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+              gap: 1.5rem;
+              margin-top: 1.5rem;">
+            <div
+              style="
+                padding: 1.5rem;
+                background: linear-gradient(135deg, #10b981, #059669);
+                border-radius: 15px;
+                color: white;">
+              <div style="font-size: 2rem; margin-bottom: 0.5rem">📊</div>
+              <h4
+                style="font-size: 0.9rem; opacity: 0.9; margin-bottom: 0.5rem">
+                Daily Steps
+              </h4>
+              <div style="font-size: 2rem; font-weight: 900">8,547</div>
+            </div>
+            <div
+              style="padding: 1.5rem;
+                background: linear-gradient(135deg, #3b82f6, #2563eb);
+                border-radius: 15px;
+                color: white;">
+              <div style="font-size: 2rem; margin-bottom: 0.5rem">💧</div>
+              <h4
+                style="font-size: 0.9rem; opacity: 0.9; margin-bottom: 0.5rem">
+                Water Intake
+              </h4>
+              <div style="font-size: 2rem; font-weight: 900">6 / 8 cups</div>
+            </div>
+            <div
+              style="padding: 1.5rem;
+                background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+                border-radius: 15px;
+                color: white;">
+              <div style="font-size: 2rem; margin-bottom: 0.5rem">😴</div>
+              <h4
+                style="font-size: 0.9rem; opacity: 0.9; margin-bottom: 0.5rem">
+                Sleep Quality
+              </h4>
+              <div style="font-size: 2rem; font-weight: 900">7.5 hrs</div>
+            </div>
+            <div
+              style="
+                padding: 1.5rem;
+                background: linear-gradient(135deg, #f59e0b, #d97706);
+                border-radius: 15px;
+                color: white;">
+              <div style="font-size: 2rem; margin-bottom: 0.5rem">🔥</div>
+              <h4
+                style="font-size: 0.9rem; opacity: 0.9; margin-bottom: 0.5rem">
+                Calories Burned
+              </h4>
+              <div style="font-size: 2rem; font-weight: 900">2,145</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="action-card">
+          <h2>🎯 Quick Actions</h2>
+          <div class="action-grid">
+            <button class="action-btn" onclick="openUploadReport()">
+              📤 Upload Report
+            </button>
+            <button class="action-btn" onclick="openChatFromDashboard()">
+              💬 Chat with AI
+            </button>
+            <button class="action-btn" onclick="openBMICalculator()">
+              📊 BMI Calculator
+            </button>
+            <button class="action-btn" onclick="showEmergency()">
+              🚨 Emergency
+            </button>
+          </div>
+        </div>
+
+        <div class="action-card">
+          <h2>📄 My Medical Reports</h2>
+          <div id="reportsListDash" class="reports-grid">
+            <div class="empty-state">
+              <div class="empty-state-icon">📭</div>
+              <h3 style="color: #666; margin-bottom: 0.5rem">No reports yet</h3>
+              <p>Upload your first medical report to get started</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- BMI Calculator -->
+    <div class="dashboard-overlay" id="bmiPage">
+      <div class="bg-shapes">
+        <div class="shape shape-1" style="opacity: 0.06"></div>
+        <div class="shape shape-2" style="opacity: 0.06"></div>
+      </div>
+
+      <div class="dashboard-header">
+        <div class="dashboard-logo">
+          <span style="font-size: 2rem">📊</span>
+          <span>BMI Calculator</span>
+        </div>
+        <button
+          class="logout-btn-dash"
+          onclick="backToDashboard()"
+          style="
+            background: linear-gradient(135deg, #e8efff, #f5f7ff);
+            color: var(--primary);">
+          ← Back
+        </button>
+      </div>
+
+      <div class="dashboard-main">
+        <div style="max-width: 800px; margin: 0 auto">
+          <div class="action-card" style="padding: 3rem">
+            <h1
+              style="
+                color: var(--dark);
+                font-size: 2.5rem;
+                margin-bottom: 1rem;
+                font-weight: 900;">
+              📊 BMI Calculator
+            </h1>
+            <p style="color: #666; margin-bottom: 2rem; font-size: 1.1rem">
+              Calculate your Body Mass Index and get personalized health
+              insights
+            </p>
+
+            <div class="form-group">
+              <label>Height (cm)</label>
+              <input
+                type="number"
+                id="bmiHeight"
+                placeholder="170"
+                min="100"
+                max="250"/>
+            </div>
+
+            <div class="form-group">
+              <label>Weight (kg)</label>
+              <input
+                type="number"
+                id="bmiWeight"
+                placeholder="68"
+                min="20"
+                max="200"/>
+            </div>
+
+            <button
+              class="btn-primary-full"
+              style="padding: 1.3rem; font-size: 1.15rem"
+              onclick="calculateBMI()">
+              Calculate BMI
+            </button>
+
+            <div
+              id="bmiResult"
+              style="display: none;
+                margin-top: 2.5rem;
+                padding: 2.5rem;
+                background: linear-gradient(135deg, #f5f7ff, #e8efff);
+                border-radius: 20px;
+                text-align: center;
+                border: 3px solid var(--primary);">
+              <h2
+                style="
+                  color: var(--dark);
+                  margin-bottom: 1rem;
+                  font-size: 1.5rem;">
+                Your BMI Result
+              </h2>
+              <div
+                style="font-size: 5rem; font-weight: 900; margin: 1rem 0"
+                id="bmiValue">
+                0
+              </div>
+              <h3
+                style="font-size: 1.5rem; margin-bottom: 1rem; font-weight: 900"
+                id="bmiCategory">
+                Category
+              </h3>
+              <p
+                style="color: #666; line-height: 1.8; font-size: 1.05rem"
+                id="bmiAdvice"
+              ></p>
+            </div>
+
+            <div
+              style="
+                margin-top: 3rem;
+                padding: 2rem;
+                background: linear-gradient(135deg, #fff3cd, #fef3c7);
+                border-radius: 20px;
+                border: 2px solid #ffc107;">
+              <h3
+                style="
+                  color: var(--dark);
+                  margin-bottom: 1rem;
+                  font-size: 1.3rem;">
+                📋 BMI Categories:
+              </h3>
+              <p style="color: #666; line-height: 2.2; font-size: 1.05rem">
+                • <strong>Underweight:</strong> BMI < 18.5<br />
+                • <strong>Normal weight:</strong> BMI 18.5 - 24.9<br />
+                • <strong>Overweight:</strong> BMI 25 - 29.9<br />
+                • <strong>Obese:</strong> BMI ≥ 30
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Upload Report Modal -->
+    <div class="modal-overlay" id="uploadModal">
+      <div
+        class="login-modal"
+        style="grid-template-columns: 1fr; max-width: 600px"
+      >
+        <div class="login-right">
+          <button class="modal-close" onclick="closeUploadModal()">×</button>
+          <h2>📤 Upload Medical Report</h2>
+          <p style="color: #666; margin-bottom: 2rem">
+            Upload your medical documents (PDF, JPG, PNG)
+          </p>
+
+          <div
+            style="
+              border: 3px dashed #e5e5e5;
+              border-radius: 20px;
+              padding: 3rem;
+              text-align: center;
+              cursor: pointer;
+              transition: all 0.3s;
+              margin: 2rem 0;
+              background: linear-gradient(135deg, #f8f9ff, #f5f7ff);"
+            id="uploadArea"
+            onclick="document.getElementById('fileInput').click()">
+            <div style="font-size: 5rem; margin-bottom: 1rem">📁</div>
+            <h3
+              style="
+                color: var(--dark);
+                margin-bottom: 0.5rem;
+                font-weight: 900;">
+              Click to Upload
+            </h3>
+            <p style="color: #666">or drag and drop your file here</p>
+            <p style="color: #999; font-size: 0.9rem; margin-top: 1rem">
+              Supported: PDF, JPG, PNG (Max 10MB)
+            </p>
+          </div>
+          <input
+            type="file"
+            id="fileInput"
+            accept=".pdf,.jpg,.jpeg,.png"
+            style="display: none"
+            onchange="handleFileUpload(event)"/>
+
+          <div
+            id="uploadSuccess"
+            style="
+              display: none;
+              padding: 1.5rem;
+              background: linear-gradient(135deg, #d1fae5, #a7f3d0);
+              border-radius: 15px;
+              color: #10b981;
+              text-align: center;
+              font-weight: 700;
+              border: 2px solid #10b981;">
+            ✅ Report uploaded successfully!
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Emergency Modal -->
+    <div class="modal-overlay" id="emergencyModal">
+      <div
+        class="login-modal"
+        style="grid-template-columns: 1fr; max-width: 700px">
+        <div class="login-right">
+          <button class="modal-close" onclick="closeEmergency()">×</button>
+          <h2 style="color: var(--danger)">🚨 Emergency Contacts</h2>
+          <p style="margin-bottom: 2rem; color: #666">
+            Quick access to emergency services
+          </p>
+
+          <div
+            style="
+              display: grid;
+              grid-template-columns: repeat(2, 1fr);
+              gap: 1.5rem;">
+            <div
+              style="
+                background: linear-gradient(135deg, #fee, #fdd);
+                padding: 2.5rem;
+                border-radius: 20px;
+                text-align: center;
+                cursor: pointer;
+                transition: all 0.3s;
+                border: 3px solid transparent;"
+              onclick="alert('📞 Calling Ambulance 102...')"
+              onmouseover="this.style.borderColor='var(--danger)'; this.style.transform='scale(1.05)'"
+              onmouseout="this.style.borderColor='transparent'; this.style.transform='scale(1)'">
+              <div style="font-size: 3.5rem; margin-bottom: 0.5rem">🚑</div>
+              <h3
+                style="
+                  color: var(--dark);
+                  margin-bottom: 0.5rem;
+                  font-weight: 900;">
+                Ambulance
+              </h3>
+              <div
+                style="
+                  font-size: 2.5rem;
+                  color: var(--danger);
+                  font-weight: 900;">
+                102
+              </div>
+            </div>
+
+            <div
+              style="
+                background: linear-gradient(135deg, #fee, #fdd);
+                padding: 2.5rem;
+                border-radius: 20px;
+                text-align: center;
+                cursor: pointer;
+                transition: all 0.3s;
+                border: 3px solid transparent;"
+              onclick="alert('📞 Calling Emergency 112...')"
+              onmouseover="this.style.borderColor='var(--danger)'; this.style.transform='scale(1.05)'"
+              onmouseout="this.style.borderColor='transparent'; this.style.transform='scale(1)'">
+              <div style="font-size: 3.5rem; margin-bottom: 0.5rem">🆘</div>
+              <h3
+                style="
+                  color: var(--dark);
+                  margin-bottom: 0.5rem;
+                  font-weight: 900;">
+                Emergency
+              </h3>
+              <div
+                style="
+                  font-size: 2.5rem;
+                  color: var(--danger);
+                  font-weight: 900;">
+                112
+              </div>
+            </div>
+
+            <div
+              style="background: linear-gradient(135deg, #fee, #fdd);
+                padding: 2.5rem;
+                border-radius: 20px;
+                text-align: center;
+                cursor: pointer;
+                transition: all 0.3s;
+                border: 3px solid transparent;"
+              onclick="alert('📞 Calling Police 100...')"
+              onmouseover="this.style.borderColor='var(--danger)'; this.style.transform='scale(1.05)'"
+              onmouseout="this.style.borderColor='transparent'; this.style.transform='scale(1)'">
+              <div style="font-size: 3.5rem; margin-bottom: 0.5rem">👮</div>
+              <h3
+                style="color: var(--dark);
+                  margin-bottom: 0.5rem;
+                  font-weight: 900;">
+                Police
+              </h3>
+              <div
+                style="
+                  font-size: 2.5rem;
+                  color: var(--danger);
+                  font-weight: 900;">
+                100
+              </div>
+            </div>
+
+            <div
+              style="
+                background: linear-gradient(135deg, #fee, #fdd);
+                padding: 2.5rem;
+                border-radius: 20px;
+                text-align: center;
+                cursor: pointer;
+                transition: all 0.3s;
+                border: 3px solid transparent;"
+              onclick="alert('📞 Calling Fire 101...')"
+              onmouseover="this.style.borderColor='var(--danger)'; this.style.transform='scale(1.05)'"
+              onmouseout="this.style.borderColor='transparent'; this.style.transform='scale(1)'">
+              <div style="font-size: 3.5rem; margin-bottom: 0.5rem">🚒</div>
+              <h3
+                style="
+                  color: var(--dark);
+                  margin-bottom: 0.5rem;
+                  font-weight: 900;">
+                Fire Brigade
+              </h3>
+              <div
+                style="
+                  font-size: 2.5rem;
+                  color: var(--danger);
+                  font-weight: 900;">
+                101
+              </div>
+            </div>
+          </div>
+
+          <div
+            style="
+              margin-top: 2rem;
+              padding: 1.5rem;
+              background: #fff3cd;
+              border-radius: 15px;
+              border: 3px solid #ffc107;">
+            <p style="color: #856404; font-weight: 700; font-size: 1.05rem">
+              ⚠️ For life-threatening emergencies, call 108 or 112 immediately!
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Article Modal -->
+    <div class="modal-overlay" id="articleModal">
+      <div
+        class="login-modal"
+        style="
+          grid-template-columns: 1fr;
+          max-width: 800px;
+          max-height: 90vh;
+          overflow-y: auto;">
+        <div class="login-right">
+          <button class="modal-close" onclick="closeArticleModal()">×</button>
+          <div id="articleContent"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Chat Widget -->
+    <div class="chat-widget" id="chatWidget">
+      <button class="chat-toggle" onclick="toggleChat()">💬</button>
+      <div class="chat-window" id="chatWindow">
+        <div class="chat-header">
+          <h3 style="font-size: 1.2rem; font-weight: 900">
+            🤖 MediBot Assistant
+          </h3>
+          <button class="chat-close" onclick="toggleChat()">×</button>
+        </div>
+        <div class="chat-messages" id="chatMessages">
+          <div class="chat-message bot">
+            <div class="message-avatar bot-avatar">🤖</div>
+            <div class="message-content">
+              <strong>Hello! I'm MediBot</strong><br /><br />
+              I can help you with:<br />
+              • Symptom analysis<br />
+              • Medicine information<br />
+              • Health tips & advice<br /><br />
+              How can I assist you today?
+            </div>
+          </div>
+        </div>
+        <div class="chat-input-area">
+          <input
+            type="text"
+            class="chat-input"
+            id="chatInput"
+            placeholder="Ask about symptoms, medicines..."
+            onkeypress="handleChatKeyPress(event)"/>
+          <button class="chat-send" id="chatSend" onclick="sendChatMessage()">
+            ➤
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
