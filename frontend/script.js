@@ -2,7 +2,7 @@
       // ============================================
       // BACKEND CONFIGURATION
       // ============================================
-      const API_BASE_URL = "http://localhost:8000";
+      const API_BASE_URL = "https://medibot-healthcare-system.onrender.com";
       async function handleLogin(e) {
         e.preventDefault();
 
